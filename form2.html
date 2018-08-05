@@ -29,19 +29,23 @@
 <body>
         
     <div class="container">
-      <h2>Enquires</h2>
+      <h2>Enquires or Feedback</h2>
       <form name='enquiries' method="post" onsubmit="return validation() "action="/action_page.php">
         <div class="form-group">
             <label for="name"><pre>Name: </pre></label>
-          <input type="name" class="form-control" placeholder="Enter Name" name="name">
+          <input type="name" style="width:200px" class="form-control" placeholder="Enter Name" name="name">
         </div>
         <div class="form-group">
             <label for="email"><pre>Email: </pre></label>
-          <input type="email" class="form-control" placeholder="Enter Email" name="email">
+          <input type="email"style="width:200px" class="form-control" placeholder="Enter Email" name="email">
         </div>
         <div class="form-group">
-            <label for="name"><pre>Mobile No: </pre></label>
-            <input type="tel" minlength="10" maxlength="10" class="form-control" placeholder="Enter Mobile No" name="mobile_number">
+            <label for="name"><pre>Mobile Number: </pre></label>
+            <input type="tel" style="width:200px" minlength="10" maxlength="10" class="form-control" placeholder="Enter Mobile No" name="mobile_number">
+        </div>
+        <div class="form-group">
+            <label for="name"><pre>Feedback: </pre></label>
+            <textarea name="textarea" placeholder="Enter Feedback or your query here" style="width:200px;height:50px;"></textarea>
         </div>
           <pre>
           </pre>
