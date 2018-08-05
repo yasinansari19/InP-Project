@@ -1,2 +1,2 @@
 # InP-Project
-Website creation using HTML, JS, CSS, BOOTSTRAP and PHP.
+Website creation using HTML, BOOTSTRAP and PHP.
