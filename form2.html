@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>form2</title>
+  <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+            function validation()
+            {
+                if (document.enquiries.name.value == "")
+                {
+                    alert("Name should not be empty")
+                    return false;
+                }
+                if (document.enquiries.email.value == "")
+                {
+                    alert("Email should not be empty")
+                    return false;
+                }
+                if (document.enquiries.mobile_number.value == "")
+                {
+                    alert("Mobile No should not be empty")
+                    return false;
+                }
+                return true;
+            }       
+        </script>
 </head>
 <body>
-
+        
     <div class="container">
       <h2>Enquires</h2>
-      <form action="/action_page.php">
+      <form name='enquiries' method="post" onsubmit="return validation() "action="/action_page.php">
         <div class="form-group">
             <label for="name"><pre>Name: </pre></label>
-          <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+          <input type="name" class="form-control" placeholder="Enter Name" name="name">
         </div>
         <div class="form-group">
             <label for="email"><pre>Email: </pre></label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          <input type="email" class="form-control" placeholder="Enter Email" name="email">
         </div>
         <div class="form-group">
-            <label for="name"><pre>Mobile no: </pre></label>
-          <input type="number" class="form-control" id="name" placeholder="Enter mobile no" name="number">
+            <label for="name"><pre>Mobile No: </pre></label>
+            <input type="tel" minlength="10" maxlength="10" class="form-control" placeholder="Enter Mobile No" name="mobile_number">
         </div>
           <pre>
           </pre>
