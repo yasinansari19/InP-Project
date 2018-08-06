@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
     <head>
+
         <title>form1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,27 +20,24 @@
                 return true;
             }       
         </script>
+		
+
+		
     </head>
-
-<body>
-
-    <div class="container">
-      <h2>Login</h2>
-      <form name="login" action="/action_page.php" onsubmit="return validation()">
-        <div class="form-group">
-            <label for="email"><pre>Email: </pre></label>
-          <input type="email" class="form-control" placeholder="Enter email" name="email">
-        </div>
-        <div class="form-group">
-            <label for="password"><pre>Password: </pre></label>
-          <input type="password" class="form-control" placeholder="Enter password" name="password">
-        </div>
-          <pre>
-          </pre>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-
-</body>
-
+    <body>
+        <form name='login' method="post" action="PhpForm.php"  onsubmit="return validation()">
+            <table>
+                <tr>
+                    <td>Email </td> <td> <input type="email" style="width:200px" class="form-control" placeholder="Enter Email" name="email"> </td>
+                </tr>
+                <tr>
+                    <td>Password </td> <td><input type="password"style="width:200px" class="form-control" placeholder="Enter password" name="password"> </td>
+                </tr>
+                <tr>                    
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Submit"> </td>
+                </tr>                
+            </table>
+        </form>
+    </body>
 </html>
