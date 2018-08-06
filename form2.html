@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>form2</title>
-  <meta charset="UTF-8">
+<html>
+    <head>
+        <title>form2</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type='text/javascript'>
             function validation()
@@ -25,33 +24,27 @@
                 return true;
             }       
         </script>
-</head>
-<body>
-        
-    <div class="container">
-      <h2>Enquires or Feedback</h2>
-      <form name='enquiries' method="post" onsubmit="return validation() "action="/action_page.php">
-        <div class="form-group">
-            <label for="name"><pre>Name: </pre></label>
-          <input type="name" style="width:200px" class="form-control" placeholder="Enter Name" name="name">
-        </div>
-        <div class="form-group">
-            <label for="email"><pre>Email: </pre></label>
-          <input type="email"style="width:200px" class="form-control" placeholder="Enter Email" name="email">
-        </div>
-        <div class="form-group">
-            <label for="name"><pre>Mobile Number: </pre></label>
-            <input type="tel" style="width:200px" minlength="10" maxlength="10" class="form-control" placeholder="Enter Mobile No" name="mobile_number">
-        </div>
-        <div class="form-group">
-            <label for="name"><pre>Feedback or query: </pre></label>
-            <textarea name="textarea" placeholder="Enter Feedback or your query here" style="width:200px;height:50px;"></textarea>
-        </div>
-          <pre>
-          </pre>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </div>
-
-</body>
+    </head>
+    <body>
+        <form name='enquiries' method="post" action="PhpForm.php"  onsubmit="return validation()">
+            <table>
+                <tr>
+                    <td>Name </td> <td> <input type="name" style="width:200px" class="form-control" placeholder="Enter Name" name="name"> </td>
+                </tr>
+                <tr>
+                    <td>Email </td> <td><input type="email"style="width:200px" class="form-control" placeholder="Enter Email" name="email"> </td>
+                </tr>
+                <tr>
+                    <td>Mobile Number </td> <td><input type="tel" style="width:200px" minlength="10" maxlength="10" class="form-control" placeholder="Enter Mobile No" name="mobile_number"> </td>
+                </tr>
+			<tr>
+                    <td>Feedback or query </td> <td> <textarea name="textarea" placeholder="Enter Feedback or your query here" style="width:200px;height:50px;"></textarea> </td>
+                </tr>
+                <tr>                    
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Submit"> </td>
+                </tr>                
+            </table>
+        </form>
+    </body>
 </html>
