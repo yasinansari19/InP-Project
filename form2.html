@@ -6,17 +6,17 @@
         <script type='text/javascript'>
             function validation()
             {
-                if (document.enquiries.name.value == "")
+                if (document.feedback.name.value == "")
                 {
                     alert("Name should not be empty")
                     return false;
                 }
-                if (document.enquiries.email.value == "")
+                if (document.feedback.email.value == "")
                 {
                     alert("Email should not be empty")
                     return false;
                 }
-                if (document.enquiries.mobile_number.value == "")
+                if (document.feedback.mobile_number.value == "")
                 {
                     alert("Mobile No should not be empty")
                     return false;
@@ -26,7 +26,7 @@
         </script>
     </head>
     <body>
-        <form name='enquiries' method="post" action="PhpForm.php"  onsubmit="return validation()">
+        <form name='feedback' method="post" action="PhpForm.php"  onsubmit="return validation()">
             <table>
                 <tr>
                     <td>Name </td> <td> <input type="name" style="width:200px" class="form-control" placeholder="Enter Name" name="name"> </td>
