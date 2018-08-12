@@ -1,0 +1,74 @@
+<html>
+    <head>
+    <h1 style="color=red;font-size:300%;text-align:center">SOLIDUOUS SYSTEMWARE</h1>
+        <title>UPDATE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    </head>
+    <body style="background-color:powderblue;text-align:center">
+      <img src="hardware.jpg" alt="Flowers" style="width:auto;">
+        <form id='form1'>
+            <table align='center' id='table_form'>
+                <tr>
+                    <td>EMAIL ID </td>  <td><input type="text" id="EMAIL ID" > </td>
+                </tr>
+                <tr>
+                    <td>PRODUCT NAME </td>  <td><input type="text" id="PRODUCT NAME"> </td>
+                </tr>
+                <tr>
+                    <td>QUANTITY </td> <td><input type="number" id="QUANTITY"> </td>
+                </tr>
+                <tr>
+                    <td>Price </td> <td><input type="text" id="price"> </td>
+                </tr>
+                <tr>
+                    <td> </td> <td><input type="button" id="update" value="Update"> <input type="button" id="delete" value="Delete" </td>
+                </tr>
+            </table>
+        </form>
+        
+      <!--  <?php
+            $title = $author = $price = "";
+            $received = NULL;
+            
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "siespythonclass";
+
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            $sql = "SELECT * from book";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                echo "<table id='table1'>";
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["id"] . "</td>";
+                    echo "<td>" . $row["title"] . "</td>";
+                    echo "<td>" . $row["author"] . "</td>";
+                    echo "<td>" . $row["price"] . "</td>";
+                    echo "</tr>";
+                }
+                echo "</table>";
+            } else {
+                echo "0 results";
+            }
+            $conn->close();
+        ?>        
+        !-->
+        <script type='text/javascript'>
+            let table = document.getElementById('table1'), iIndex;
+            for(let i = 0; i < table.rows.length; i++){
+                table.rows[i].onclick = function() {
+                    rIndex = this.rowIndex;
+                    document.getElementById('EMAIL ID').value = this.cells[0].innerHTML;
+                    document.getElementById('PRODUCT NAME').value = this.cells[1].innerHTML;
+                    document.getElementById('QUANTITY').value = this.cells[2].innerHTML;
+                    document.getElementById('price').value = this.cells[3].innerHTML;
+                }
+            }
+        </script>
