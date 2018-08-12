@@ -7,9 +7,9 @@
         <script type='text/javascript'>
             function validation()
             {
-                if (document.login.email.value == "")
+                if (document.login.username.value == "")
                 {
-                    alert("Email should not be empty")
+                    alert("Username should not be empty")
                     return false;
                 }
                 if (document.login.password.value == "")
@@ -20,15 +20,12 @@
                 return true;
             }       
         </script>
-		
-
-		
     </head>
     <body>
-        <form name='login' method="post" action="PhpForm.php"  onsubmit="return validation()">
+        <form name='login' method="post" action="CheckLogin.php"  onsubmit="return validation()">
             <table>
                 <tr>
-                    <td>Email </td> <td> <input type="email" style="width:200px" class="form-control" placeholder="Enter Email" name="email"> </td>
+                    <td>Username </td> <td> <input type="text" style="width:200px" class="form-control" placeholder="Enter Username" name="username"> </td>
                 </tr>
                 <tr>
                     <td>Password </td> <td><input type="password"style="width:200px" class="form-control" placeholder="Enter password" name="password"> </td>
