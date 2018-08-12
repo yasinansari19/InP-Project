@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>form3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type='text/javascript'>
+            function validation()
+            {
+                if (document.product_info.customer_name.value == "")
+                {
+                    alert("Customer Name should not be empty")
+                    return false;
+                }
+                if (document.product_info.product.value == "")
+                {
+                    alert("Product should not be empty")
+                    return false;
+                }
+                if (document.product_info.quantity.value == "")
+                {
+                    alert("Quantity should not be empty")
+                    return false;
+                }
+                if (document.product_info.price.value == "")
+                {
+                    alert("Price should not be empty")
+                    return false;
+                }
+                return true;
+            }       
+        </script>
+    </head>
+    <body>
+        <form name='product_info' method="post" action="PhpForm.php"  onsubmit="return validation()">
+            <table>
+                <tr>
+                    <td>Customer Name </td> <td> <input type="name" style="width:200px" class="form-control" placeholder="Enter Name" name="customer_name"> </td>
+                </tr>
+                <tr>
+                    <td>Product </td> <td><input type="name"style="width:200px" class="form-control" placeholder="Enter Product" name="product"> </td>
+                </tr>
+                <tr>
+                    <td>Quantity </td> <td><input type="number" style="width:200px" class="form-control" placeholder="Enter Quantity" name="quantity"> </td>
+                </tr>
+			<tr>
+                    <td>Price </td> <td> <input type="number" style="width:200px" class="form-control" placeholder="Enter Price" name="price"> </td> </td>
+                </tr>
+                <tr>                    
+                    <td></td>
+                    <td>
+                        <input type="submit" id="insert" value="Insert">
+                        <input type="submit" id="update" value="Update"> 
+                        <input type="submit" id="delete" value="Delete" </td>
+                </tr>                
+            </table>
+        </form>
+    </body>
+</html>
