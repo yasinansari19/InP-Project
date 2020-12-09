@@ -1,0 +1,51 @@
+<html >
+<head>
+    
+    <title>HOME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  
+</head>
+
+<body>
+    <center>
+    <button type="button" onclick="loadDoc()">VIEW SERVICE CENTRES</button>
+    <br><br>
+    <table id="demo" cellpadding='10'></table>
+    <script>
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          myFunction(this);
+        }
+      };
+      xhttp.open("GET", "ajax.xml", true);
+      xhttp.send();
+    }
+    function myFunction(xml) {
+      var i;
+      var xmlDoc = xml.responseXML;
+      var table="<tr><th>COMPANY</th><th>PLACE</th><th>CONTACTNO</th></tr>";
+      var x = xmlDoc.getElementsByTagName("DETAILS");
+      for (i = 0; i <x.length; i++) { 
+        table += "<tr><td>" +
+        x[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("PLACE")[0].childNodes[0].nodeValue +
+        "</td><td>"+
+        x[i].getElementsByTagName("CONTACTNO")[0].childNodes[0].nodeValue +
+        "</td></tr>";
+      }
+      document.getElementById("demo").innerHTML = table;
+    }
+    </script>
+    
+    </center>
+
+</body>
+
+</html>
